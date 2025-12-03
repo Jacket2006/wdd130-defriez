@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD130</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <img src="images/logo.png" alt="Logo" width="200px">
-        <a href="home.html">Homepage</a>
-        <a href="ludemdare.html">Ludem Dare</a>
-        <a href="globalgamejam.html">Global Game Jam</a>
+        <img id="logo" src="images/logo.png" alt="Logo" width="200px">
+        <a class="navLink" href="home.html">Homepage</a>
+        <a class="navLink" href="ludemdare.html">Ludem Dare</a>
+        <a class="navLink" href="globalgamejam.html">Global Game Jam</a>
     </nav>
     <main>
-        <h1>What Is A Game Jam?</h1>
-        <p>Game Jams are timed events in which a team of game developers work together and collaborate to create small, polished games. A game jam can take as long as a couple months or be as short as a couple of hours, within this time many different individuals or teams compete to make the best game. Only two things remain consistent between game jams, every game jam has a time limit and a theme to direct creative design. Inside each person’s game there is much to be considered, games are typically graded on sound design/music, artistic visuals and effects, gameplay ingenuity, how fun the finished product is and how well the game fits the theme.</p>
-        <h1>Popular Game Jams</h1>
+        <div id="gameContainer">
+            <h1>What Is A Game Jam?</h1>
+            <p>Game Jams are timed events in which a team of game developers work together and collaborate to create small, polished games. A game jam can take as long as a couple months or be as short as a couple of hours, within this time many different individuals or teams compete to make the best game. Only two things remain consistent between game jams, every game jam has a time limit and a theme to direct creative design. Inside each person’s game there is much to be considered, games are typically graded on sound design/music, artistic visuals and effects, gameplay ingenuity, how fun the finished product is and how well the game fits the theme.</p>
+        </div>
+            <h1 id="jamTitle">Popular Game Jams</h1>
         <section>
             <h2>Ludem Dare</h2>
             <h2>Global Game Jam</h2>
-            <img src="images/ludemdare.png" alt="LudumDare Logo">
-            <img src="images/globaljam.png" alt="Global Game Jam Logo">
-            <a href="ludemdare.html" class="button">Learn More</a>
-            <a href="globalgamejam.html" class="button">Learn More</a>
+            <img id="ludemImg"src="images/ludemdare.png" alt="LudumDare Logo">
+            <img id="globImg" src="images/globaljam.png" alt="Global Game Jam Logo">
+            <a class="jamButtons"href="ludemdare.html" class="button">Learn More</a>
+            <a class="jamButtons"href="globalgamejam.html" class="button">Learn More</a>
         </section>
     </main>
     <footer>&copy; DeFriez 2025 </footer>
