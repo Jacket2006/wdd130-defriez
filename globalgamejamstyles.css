@@ -1,0 +1,242 @@
+:root {
+    --dark-blue: #1C263E;
+    --black-accent: #000000;
+    --white: #FFFFFF;
+    --cyan: #17EAD9;
+    --blue: #0000EA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--cyan);
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--black-accent);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+.navLink {
+    color: var(--cyan);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.navLink:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.navLink.active {
+    background-color: var(--cyan);
+    color: var(--dark-blue);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(0, 0, 234, 0.2), rgba(23, 234, 217, 0.1));
+    border-radius: 15px;
+    border: 2px solid var(--cyan);
+}
+
+.jam-logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--cyan);
+    text-shadow: 0 0 10px rgba(23, 234, 217, 0.5);
+    margin: 0;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--cyan);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(23, 234, 217, 0.3);
+    border-color: var(--blue);
+}
+
+.info-card h2 {
+    font-size: 2rem;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(23, 234, 217, 0.4);
+}
+
+.info-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--white);
+}
+
+.info-card a {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-card a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 0, 234, 0.3), rgba(23, 234, 217, 0.2));
+    padding: 3rem;
+    border-radius: 15px;
+    border: 3px solid var(--cyan);
+    margin-bottom: 3rem;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(23, 234, 217, 0.5);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--cyan);
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(23, 234, 217, 0.4);
+}
+
+.cta-button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 234, 0.6);
+}
+
+footer {
+    background-color: var(--black-accent);
+    color: var(--cyan);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 3px solid var(--cyan);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #logo {
+        width: 150px;
+    }
+
+    .navLink {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
