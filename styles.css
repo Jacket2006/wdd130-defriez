@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Electrolize&family=Lexend:wght@100..900&family=Oxanium:wght@200..800&display=swap');
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +15,7 @@ nav{
     width: 80%;       
     margin: 20px auto; 
     padding: 15px 20px;
+    font-family: "electrolize";
     }
     nav img, a{
     color: #17EAD9;
@@ -21,9 +23,43 @@ nav{
     text-decoration: none;
     font-size: 1.25em;
 }
+nav a{
+      position: relative;
+  text-decoration: none;
+  color: #202020;
+  padding: 6px 10px;
+  font-weight: 600;
+  border-radius: 10px;
+   transition: color .25s ease; 
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #17EAD9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+  
+}
+nav a:hover::after {
+  transform: scaleX(1);
+    color: white;                 
+}
+nav a:hover {
+  color: white;                     /* text becomes white */
+}
 #gameContainer{
     margin: 5% 25% ;
     text-align: center;
+    background-color: #0d111b;
+    padding: 30px;
+      border: 2px solid #3b82f6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #3b82f6, 0 0 18px #93c5fd;
 
 }
 #jamTitle{
@@ -32,6 +68,7 @@ nav{
 }
 h1{
     font-size: 2.5em;
+    font-family: "Electrolize";
 }
 section{
     display: grid;
@@ -44,24 +81,38 @@ section{
 h2{
     font-size: 2em;
     text-align: center;
+     font-family: "electrolize";
 }
 .jamButtons{
 display: inline-block;
     margin-top: 20px;
     padding: 12px 35px;
-    background-color: black;
+    background-color: rgb(25, 16, 94);
     color: #17EAD9;
     text-decoration: none;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 1.1em;
+    font-family: "oxanium";
+     transition: transform .25s ease, background-color .25s ease;
 
 }
 
 .jamButtons:hover {
-    background-color: #555;
+    
+      transform: scale(1.1);        /* enlarge */
+    background-color: #17EAD9;    /* new background color */
+    color: black
 }
 #globImg{
     height: 95%;
+     border: 2px solid #3b82f6;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #3b82f6;
+}
+#ludemImg{
+     border: 2px solid #3b82f6;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #3b82f6;
 }
 footer {
     text-align: center;
@@ -69,8 +120,17 @@ footer {
     margin-top: 50px;
     background-color:#3d5488; 
     border: 2px solid #ddd;
+     width: 80%;       
+    margin: 30px auto; 
+    padding: 45px 20px;
+     font-family: "electrolize";
+     font-size: 1.1em;
+    
     
 }
 img{
     border: 3px solid black;
+}
+p{
+    font-family: "oxanium";
 }
